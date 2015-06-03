@@ -1,0 +1,16 @@
+{
+  "name": "hope.cors",
+  "version": "1.0.0",
+  "description": "Simple CORS middleware for Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel/register"
+  },
+  "author": "Sergey Sadovoi <sergey@hope.ua>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.4.7",
+    "chai": "^2.2.0",
+    "node-mocks-http": "^1.4.3"
+  }
+}
