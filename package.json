@@ -1,7 +1,11 @@
 {
-  "name": "hope.cors",
+  "name": "@hope/cors",
   "version": "1.0.0",
   "description": "Simple CORS middleware for Express",
+  "repository" : {
+    "type": "git",
+    "url": "https://github.com/HopeUA/cors.module.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel/register"
