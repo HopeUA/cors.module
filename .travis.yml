@@ -4,9 +4,7 @@ node_js:
   - "0.12"
   - "iojs"
 before_install:
-  - npm install -g npm
-  - npm install -g mocha
-  - npm install -g eslint
+  - npm install -g npm mocha eslint babel-eslint
   - npm install
 script:
   - npm test
