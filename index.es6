@@ -15,14 +15,8 @@
  * @param response {http.IncomingMessage} Server Response
  * @returns {Promise}
  */
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-    value: true
-});
-exports['default'] = middleware;
 function cors(request, response) {
-    return new Promise(function (resolve) {
+    return new Promise(resolve => {
         response.header('Access-Control-Allow-Origin', '*');
         response.header('Access-Control-Allow-Headers', 'Origin,X-Requested-With,Content-Type,Accept');
         response.header('Access-Control-Allow-Methods', 'GET,HEAD,POST,PUT,PATCH,DELETE');
@@ -36,17 +30,16 @@ function cors(request, response) {
  * Middleware factory
  * Send response on preflight request
  */
-
-function middleware() {
-    return function (request, response, next) {
-        cors(request, response).then(function () {
-            if (request.method === 'OPTIONS') {
-                response.end('', 200);
-            } else {
-                next();
-            }
-        })['catch'](next);
+export default function middleware() {
+    return (request, response, next) => {
+        cors(request, response)
+            .then(() => {
+                if (request.method === 'OPTIONS') {
+                    response.end('', 200);
+                } else {
+                    next();
+                }
+            })
+            .catch(next);
     };
 }
-
-module.exports = exports['default'];
