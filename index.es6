@@ -2,7 +2,7 @@
  * CORS middleware
  *
  * @module @hope/cors
- * @version 1.0.2
+ * @version 1.0.3
  *
  * @author Sergey Sadovoi [sergey@hope.ua]
  * @license MIT
@@ -18,7 +18,7 @@
 function cors(request, response) {
     return new Promise(resolve => {
         response.header('Access-Control-Allow-Origin', '*');
-        response.header('Access-Control-Allow-Headers', 'Origin,X-Requested-With,Content-Type,Accept');
+        response.header('Access-Control-Allow-Headers', 'Origin,X-Requested-With,Content-Type,Accept,Authorization');
         response.header('Access-Control-Allow-Methods', 'GET,HEAD,POST,PUT,PATCH,DELETE');
         response.header('Access-Control-Max-Age', '604800');
 
