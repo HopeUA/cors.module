@@ -1,7 +1,7 @@
 {
   "parser": "babel-eslint",
   "rules": {
-    "quotes": "single",
+    "quotes": [1, "single"],
     "strict": 0
   }
 }
